@@ -42,7 +42,7 @@ def encrypt_cbc(plain, key, IV):
 
     for i in range(0, len(plain) / 16):
         cipher += encrypt_ecb(xor(tmp, plain[i*16:i*16+16]), key)
-        tmp = cipher
+        tmp = cipher[i*16:i*16+16]
 
     return cipher
 
