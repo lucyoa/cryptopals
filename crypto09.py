@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
 def pad(x, blocksize):
-    num = blocksize - len(x)
+    num = blocksize - (len(x) % blocksize)
     res = x + chr(num) * num
     return res
 

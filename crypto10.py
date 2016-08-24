@@ -12,7 +12,7 @@ def xor(s1, s2):
 
 
 def pad(s):
-    num = 16 % len(s)
+    num = 16 - (len(s) % 16)
     res = s + chr(num) * num
     return res
 
