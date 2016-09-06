@@ -83,7 +83,7 @@ def func1(key):
             "MDAwMDA4b2xsaW4nIGluIG15IGZpdmUgcG9pbnQgb2g=",
             "MDAwMDA5aXRoIG15IHJhZy10b3AgZG93biBzbyBteSBoYWlyIGNhbiBibG93"]
 
-    i = random.randint(0, len(msgs))
+    i = random.randint(0, len(msgs)-1)
     
     cipher = encrypt_cbc(base64.b64decode(msgs[i]), key, iv)
     return cipher
