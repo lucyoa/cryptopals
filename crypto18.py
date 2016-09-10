@@ -20,10 +20,10 @@ def xor(s1, s2):
 def keystream(key, length):
     keystr = ""
     aes = AES.new(key, AES.MODE_ECB)
-    for i in range(0, length):
+    for i in range(0, (length/16)+1):
         nonce = "\x00" * 8 + pack(i)
         keystr += aes.encrypt(nonce)
-
+    
     return keystr
 
 
