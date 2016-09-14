@@ -1,7 +1,5 @@
 #!/usr/bin/env python
 
-import random
-
 
 def _int32(x):
     return int(0xffffffff & x)
