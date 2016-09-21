@@ -2,10 +2,10 @@
 
 
 class mt19937(object):
-    MT = []
-    index = 0
-
     def __init__(self, seed):
+        self.MT = []
+        self.index = 0
+
         self.MT.append(seed)
 
         for i in range(1, 624):
